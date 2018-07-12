@@ -1,0 +1,66 @@
+﻿@model Restaurant_Bridge_Project.Models.Customers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FavDrink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FavDrink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FavMeal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FavMeal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LargestBill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LargestBill)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

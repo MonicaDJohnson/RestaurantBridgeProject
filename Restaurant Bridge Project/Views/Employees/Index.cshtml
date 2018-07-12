@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Restaurant_Bridge_Project.Models.Employees>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerConName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerConNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStarted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmpNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerConName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerConNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateStarted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmpID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmpID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmpID })
+        </td>
+    </tr>
+}
+
+</table>
