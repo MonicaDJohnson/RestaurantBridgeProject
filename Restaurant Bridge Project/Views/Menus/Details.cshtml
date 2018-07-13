@@ -3,9 +3,12 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
+<div class="row">
+    <div class="col">
+        <h2>Details</h2>
+        <img src="~/Images/all-one-spaghetti-x_0_0.jpg" />
+    </div>
+</div>
 <div>
     <h4>Menu</h4>
     <hr />
@@ -38,5 +41,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MenuID }) |
-    @Html.ActionLink("Back to List", "Index")
+    <button class="button" id="menudetails"> @Html.ActionLink("Back to List", "Index")</button>
 </p>
